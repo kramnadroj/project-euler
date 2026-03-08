@@ -34,11 +34,5 @@ def solve() -> int | str:
     return sum_of_evens
 
 
-
-
-
-    pass
-
-
 if __name__ == "__main__":
     print(solve())

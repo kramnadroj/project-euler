@@ -1,10 +1,12 @@
 """
-Problem NNN: <title>
-https://projecteuler.net/problem=NNN
+Problem 003: Largest Prime Factor
 
-<problem statement>
+https://projecteuler.net/problem=3
+
+The prime factors of 13195 are 5, 7, 13 and 29.
+What is the largest prime factor of the number 600851475143?
+
 """
-from __future__ import annotations
 
 import sys
 import os
@@ -15,8 +17,8 @@ from utils.math_helpers import divisors, is_palindrome, digit_sum
 
 
 def solve() -> int | str:
-    pass
-
+    total = 600851475143
+    return(prime_factors(total).pop())
 
 if __name__ == "__main__":
     print(solve())
