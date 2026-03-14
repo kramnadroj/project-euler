@@ -77,8 +77,6 @@ def solve() -> int | str:
                 product_direction = "Horizontal"
                 product_sequence = matrix[a][b], matrix[a][b + 1], matrix[a][b + 2], matrix[a][b + 3]
 
-            # print(matrix[a][b], matrix[a][b + 1], matrix[a][b + 2], matrix[a][b + 3])
-
     # Vertical
     for row in range(len(matrix) - length_of_sequence + 1):
         for col in range(len(matrix[0])):
@@ -87,7 +85,6 @@ def solve() -> int | str:
                 greatest_product = temp_product
                 product_direction = "Vertical"
                 product_sequence = matrix[row][col], matrix[row + 1][col], matrix[row + 2][col], matrix[row + 3][col]
-            # print(matrix[row][col], matrix[row + 1][col], matrix[row + 2][col], matrix[row + 3][col])
 
     # Diagonal Right
     for row in range(len(matrix) - length_of_sequence + 1):
@@ -97,7 +94,6 @@ def solve() -> int | str:
                 greatest_product = temp_product
                 product_direction = "Diagonal Right"
                 product_sequence = matrix[row][col], matrix[row + 1][col + 1], matrix[row + 2][col + 2], matrix[row + 3][col + 3]
-            # print(matrix[row][col], matrix[row + 1][col + 1], matrix[row + 2][col + 2], matrix[row + 3][col + 3])
 
     # Diagonal Left
     for row in range(len(matrix) - length_of_sequence + 1):
@@ -107,7 +103,6 @@ def solve() -> int | str:
                 greatest_product = temp_product
                 product_direction = "Diagonal Left"
                 product_sequence = matrix[row][col], matrix[row + 1][col - 1], matrix[row + 2][col - 2], matrix[row + 3][col - 3]
-            # print(matrix[row][col], matrix[row + 1][col - 1], matrix[row + 2][col - 2], matrix[row + 3][col - 3])
             
     print(product_direction)
     print(product_sequence)
